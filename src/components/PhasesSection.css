@@ -1,0 +1,250 @@
+/* Phases Section Styles */
+.phases {
+  width: 100%;
+  padding: var(--spacing-xxl) 0;
+  background: var(--background-color);
+  position: relative;
+}
+
+.phases .section-inner {
+  text-align: center;
+}
+
+.phases h2 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.phases h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 2px;
+}
+
+/* Timeline Container */
+.phases-list {
+  position: relative;
+  max-width: 1000px;
+  margin: var(--spacing-xl) auto 0;
+}
+
+/* Desktop Timeline Layout */
+@media (min-width: 769px) {
+  .phases-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+  }
+
+  /* Timeline Line */
+  .phases-list::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--primary-color),
+      var(--secondary-color),
+      var(--accent-color)
+    );
+    border-radius: 2px;
+    z-index: 1;
+  }
+
+  .phase-card {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    margin-top: var(--spacing-xl);
+  }
+
+  /* Timeline Dots */
+  .phase-card::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: 3;
+    transition: all var(--transition-normal);
+  }
+
+  .phase-card:nth-child(2)::before {
+    border-color: var(--secondary-color);
+  }
+
+  .phase-card:nth-child(3)::before {
+    border-color: var(--accent-color);
+  }
+
+  /* Phase Numbers */
+  .phase-card::after {
+    content: counter(phase-counter);
+    counter-increment: phase-counter;
+    position: absolute;
+    top: -52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 4;
+  }
+
+  .phase-card:nth-child(2)::after {
+    background: var(--secondary-color);
+  }
+
+  .phase-card:nth-child(3)::after {
+    background: var(--accent-color);
+  }
+
+  .phases-list {
+    counter-reset: phase-counter;
+  }
+
+  .phase-card:hover::before {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 0 8px rgba(63, 81, 181, 0.1);
+  }
+}
+
+/* Mobile Vertical Stack */
+@media (max-width: 768px) {
+  .phases-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    position: relative;
+    padding-left: var(--spacing-xl);
+  }
+
+  /* Vertical Timeline Line */
+  .phases-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+      180deg,
+      var(--primary-color),
+      var(--secondary-color),
+      var(--accent-color)
+    );
+    border-radius: 2px;
+  }
+
+  .phase-card {
+    position: relative;
+    margin-left: var(--spacing-lg);
+  }
+
+  /* Mobile Timeline Dots */
+  .phase-card::before {
+    content: "";
+    position: absolute;
+    top: var(--spacing-md);
+    left: -45px;
+    width: 16px;
+    height: 16px;
+    background: var(--white);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+  }
+
+  .phase-card:nth-child(2)::before {
+    border-color: var(--secondary-color);
+  }
+
+  .phase-card:nth-child(3)::before {
+    border-color: var(--accent-color);
+  }
+}
+
+/* Phase Card Styles */
+.phase-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(63, 81, 181, 0.1);
+  text-align: left;
+}
+
+.phase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.phase-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.phase-card:nth-child(2) h3 {
+  color: var(--secondary-color);
+}
+
+.phase-card:nth-child(3) h3 {
+  color: #f57c00; /* Darker amber for better readability */
+}
+
+.phase-card p {
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Animation delays for staggered entrance */
+.phase-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.phase-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.phase-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+/* Hover effects for mobile */
+@media (max-width: 768px) {
+  .phase-card:hover {
+    transform: translateX(5px);
+  }
+}
