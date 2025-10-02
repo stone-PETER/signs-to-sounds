@@ -55,6 +55,7 @@
 .faq-question {
   width: 100%;
   padding: var(--spacing-lg);
+  padding-right: calc(var(--spacing-lg) + 40px); /* Extra space for icon */
   background: var(--white);
   border: none;
   text-align: left;
@@ -157,7 +158,9 @@
   .faq-question {
     padding: var(--spacing-md);
     font-size: 1rem;
-    padding-right: var(--spacing-xxl);
+    padding-right: calc(
+      var(--spacing-md) + 40px
+    ); /* Consistent icon spacing on mobile */
   }
 
   .faq-question::after {
