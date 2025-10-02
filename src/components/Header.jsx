@@ -24,6 +24,18 @@ const Header = () => {
       </a>
       <div className="section-inner header-bar">
         <div className="brand">
+          <div className="partner-logos">
+            <img
+              src="/ieee png.png"
+              alt="IEEE Logo"
+              className="partner-logo ieee-logo"
+            />
+            <img
+              src="/sps kc png.png"
+              alt="SPS Kerala Chapter Logo"
+              className="partner-logo sps-logo"
+            />
+          </div>
           <span className="logo-circle" aria-hidden="true">
             S2S
           </span>

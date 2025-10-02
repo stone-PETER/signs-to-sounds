@@ -31,6 +31,34 @@
   font-size: 1.2rem;
 }
 
+/* Partner Logos */
+.partner-logos {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-right: var(--spacing-sm);
+}
+
+.partner-logo {
+  height: 35px;
+  width: auto;
+  transition: all var(--transition-fast);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.ieee-logo {
+  height: 32px;
+}
+
+.sps-logo {
+  height: 35px;
+}
+
 .logo-circle {
   width: 40px;
   height: 40px;
@@ -112,6 +140,23 @@
     padding: var(--spacing-sm) var(--spacing-md);
   }
 
+  .partner-logos {
+    gap: 4px;
+    margin-right: var(--spacing-xs);
+  }
+
+  .partner-logo {
+    height: 28px;
+  }
+
+  .ieee-logo {
+    height: 26px;
+  }
+
+  .sps-logo {
+    height: 28px;
+  }
+
   .nav-main ul {
     gap: var(--spacing-md);
   }
@@ -125,7 +170,6 @@
     display: none;
   }
 }
-
 @media (max-width: 640px) {
   .nav-main {
     display: none;
