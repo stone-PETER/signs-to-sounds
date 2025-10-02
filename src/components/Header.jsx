@@ -35,11 +35,16 @@ const Header = () => {
               alt="SPS Kerala Chapter Logo"
               className="partner-logo sps-logo"
             />
+            <img
+              src="/Vector.png"
+              alt="SPS Kerala Chapter Logo"
+              className="partner-logo sps-logo"
+            />
           </div>
-          <span className="logo-circle" aria-hidden="true">
+          {/* <span className="logo-circle" aria-hidden="true">
             S2S
           </span>
-          <span className="brand-name">Signs to Sounds</span>
+          <span className="brand-name">Signs to Sounds</span> */}
         </div>
         <nav aria-label="Primary" className="nav-main">
           <ul>

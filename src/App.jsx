@@ -30,9 +30,9 @@ function App() {
         <div id="faq">
           <FAQSection />
         </div>
-        <div id="team">
+        {/* <div id="team">
           <TeamSection />
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>
