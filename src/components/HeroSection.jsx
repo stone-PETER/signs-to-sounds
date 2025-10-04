@@ -5,7 +5,7 @@ import "./HeroSection.css";
 const HeroSection = () => (
   <section className="hero">
     <div className="hero-content section-inner">
-      <h1>Signs to Sounds Hackathon</h1>
+      <h1>Signs to Sounds Productathon</h1>
       <p className="tagline">When Hands Speak, Tech Listens</p>
       <p className="intro">
         An international competition inspiring innovation in assistive
