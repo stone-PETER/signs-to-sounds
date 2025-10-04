@@ -66,10 +66,16 @@ const Header = () => {
             <li>
               <a href="#faq">FAQ</a>
             </li>
+            <li>
+              <a href="#posters">Posters</a>
+            </li>
           </ul>
         </nav>
         <div className="header-cta">
-          <a href="https://www.yepdesk.com/sign-to-sound" className="button primary small">
+          <a
+            href="https://www.yepdesk.com/sign-to-sound"
+            className="button primary small"
+          >
             Register
           </a>
         </div>

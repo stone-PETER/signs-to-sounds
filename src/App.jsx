@@ -5,6 +5,7 @@ import PhasesSection from "./components/PhasesSection";
 import OpportunitiesSection from "./components/OpportunitiesSection";
 import PrizesSection from "./components/PrizesSection";
 import FAQSection from "./components/FAQSection";
+import PostersSection from "./components/PostersSection";
 import TeamSection from "./components/TeamSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -29,6 +30,9 @@ function App() {
         </div> */}
         <div id="faq">
           <FAQSection />
+        </div>
+        <div id="posters">
+          <PostersSection />
         </div>
         {/* <div id="team">
           <TeamSection />
