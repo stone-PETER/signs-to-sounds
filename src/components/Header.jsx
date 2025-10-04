@@ -69,7 +69,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header-cta">
-          <a href="#register" className="button primary small">
+          <a href="https://www.yepdesk.com/sign-to-sound" className="button primary small">
             Register
           </a>
         </div>
