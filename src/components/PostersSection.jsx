@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -10,22 +10,54 @@ import "./PostersSection.css";
 // Add more poster paths as you add new files to public/posters/
 const posters = [
   "/posters/INTER.png",
+  "/posters/campuss.png",
+  "/posters/cli.png",
+  "/posters/CLOSING.png",
+  "/posters/Frame 30.png",
+  "/posters/relevance.png",
   // Add more poster paths here as you add new posters
   // Example: "/posters/poster2.jpg",
 ];
 
 const PostersSection = () => {
   const [selectedPoster, setSelectedPoster] = useState(null);
+  const originalOverflowRef = useRef(null);
+  const swiperRef = useRef(null);
 
   const openModal = (posterUrl) => {
     setSelectedPoster(posterUrl);
-    document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+    // Save original overflow value and prevent scrolling when modal is open
+    originalOverflowRef.current = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    // Pause autoplay while modal is open
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.stop();
+    }
   };
 
   const closeModal = () => {
     setSelectedPoster(null);
-    document.body.style.overflow = "auto"; // Restore scrolling
+    // Restore original overflow value (fall back to "auto" if unknown)
+    document.body.style.overflow = originalOverflowRef.current ?? "auto";
+    // Resume autoplay when modal is closed
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.start();
+    }
   };
+
+  // Cleanup on unmount: make sure overflow is restored and autoplay resumed
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = originalOverflowRef.current ?? "auto";
+      if (swiperRef.current && swiperRef.current.autoplay) {
+        try {
+          swiperRef.current.autoplay.start();
+        } catch (e) {
+          // ignore
+        }
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -34,6 +66,7 @@ const PostersSection = () => {
           <h2>Posters</h2>
           <div className="posters-carousel-container">
             <Swiper
+              loop={true}
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
@@ -44,6 +77,9 @@ const PostersSection = () => {
                 delay: 5000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
+              }}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
               }}
               breakpoints={{
                 768: {

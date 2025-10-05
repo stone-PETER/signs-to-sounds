@@ -60,9 +60,9 @@ const Header = () => {
             <li>
               <a href="#opportunities">Opportunities</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#team">Team</a>
-            </li>
+            </li> */}
             <li>
               <a href="#faq">FAQ</a>
             </li>

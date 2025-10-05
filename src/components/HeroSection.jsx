@@ -12,14 +12,14 @@ const HeroSection = () => (
         technology for real-time sign language to speech conversion.
       </p>
       <div className="hero-actions">
-        <a
+        {/* <a
           href="https://www.yepdesk.com/sign-to-sound"
           className="button primary cta"
           target="_blank"
           rel="noopener noreferrer"
         >
           Register
-        </a>
+        </a> */}
         <a href="#about" className="button secondary alt">
           Learn More
         </a>
