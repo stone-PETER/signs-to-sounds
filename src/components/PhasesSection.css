@@ -71,6 +71,7 @@
     position: relative;
     z-index: 2;
     margin-top: var(--spacing-xl);
+    height: 300px;
   }
 
   /* Timeline Dots */

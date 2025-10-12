@@ -56,6 +56,7 @@
 
 .posters-swiper {
   padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xxl);
+
 }
 
 /* Poster Card */
@@ -96,8 +97,14 @@
   border-radius: 50%;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
+  position: absolute;
 }
-
+.posters-swiper .swiper-button-prev {
+  right: 10px;
+}
+.posters-swiper .swiper-button-next {
+  right: 10px;
+}
 .posters-swiper .swiper-button-prev:hover,
 .posters-swiper .swiper-button-next:hover {
   background: var(--primary-color);

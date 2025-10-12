@@ -4,11 +4,11 @@ import "./FAQSection.css";
 const faqs = [
   {
     q: "Who is eligible to participate in the competition?",
-    a: "The competition is open to undergraduate and postgraduate students from engineering, computer science, biomedical engineering, and related fields. Teams should consist of two to four members, and at least one member should have experience in signal processing, machine learning, or embedded systems. Participation is open to students from any geographic region.",
+    a: "The competition is open to undergraduate and postgraduate students from Engineering, Electrical / Electronics Engineering, Computer Science, Biomedical Engineering, and related fields. Teams should consist of two to four members, with at least one member having experience in Signal Processing, Machine Learning, or Embedded Systems. Participation is open to students from any geographic region.",
   },
   {
     q: "Is there any participation fee or is the competition free of cost?",
-    a: "There is no participation fee. The competition is completely free for all participants, thanks to sponsorship from the IEEE Signal Processing Society.",
+    a: "There is a participation fee of 5 USD. The competition is partially supported by the lEEE Signal Processing Society, helping to keep the fee minimal for all participants.",
   },
   {
     q: "What type of submissions are required (prototype, demo video, technical documentation, source code)?",

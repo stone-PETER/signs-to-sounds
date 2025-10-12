@@ -60,9 +60,9 @@ const Header = () => {
             <li>
               <a href="#opportunities">Opportunities</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#team">Team</a>
-            </li>
+            </li> */}
             <li>
               <a href="#faq">FAQ</a>
             </li>
@@ -72,12 +72,12 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header-cta">
-          <a
+          {/* <a
             href="https://www.yepdesk.com/sign-to-sound"
             className="button primary small"
           >
             Register
-          </a>
+          </a> */}
         </div>
       </div>
     </header>
