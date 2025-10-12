@@ -7,7 +7,7 @@ const Footer = () => (
       <p>© 2025 Signs to Sounds. All rights reserved.</p>
       <div className="footer-links">
         <a href="#">Contact</a>
-        <a href="#">Sponsors</a>
+        {/* <a href="#">Sponsors</a> */}
         <a href="#">Social</a>
       </div>
     </div>
