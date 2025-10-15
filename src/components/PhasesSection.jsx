@@ -55,18 +55,16 @@ const phases = [
   },
   {
     title: "Phase 4 – Evaluation Criteria",
-    desc: "Judging will consider these points.",
+    desc: "Accuracy, performance, innovation, scalability, accessibility, documentation & presentation",
     hover: (
       <>
         <span role="img" aria-label="Trophy">
           🏆
         </span>{" "}
-        <strong>Criteria:</strong>
+        <strong>Bonus Awards like</strong>
         <ul>
-          <li>Accuracy & performance</li>
-          <li>Innovation</li>
-          <li>Accessibility</li>
-          <li>Docs & presentation</li>
+          <li>Audience’s Choice</li>
+          <li>Innovation Excellence</li>
         </ul>
       </>
     ),

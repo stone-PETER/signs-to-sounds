@@ -257,9 +257,10 @@
   .phases-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     position: relative;
-    padding-left: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+    align-items: center;
   }
 
   /* Vertical Timeline Line */
@@ -281,7 +282,13 @@
 
   .phase-card {
     position: relative;
-    margin-left: var(--spacing-lg);
+    margin: 0 auto;
+    width: 84%;
+    max-width: 420px;
+    min-height: 160px;
+    height: auto;
+    padding: calc(var(--spacing-md) + 0.4rem);
+    font-size: 0.98rem;
   }
 
   /* Mobile Timeline Dots */
@@ -289,12 +296,18 @@
     content: "";
     position: absolute;
     top: var(--spacing-md);
-    left: -45px;
+    left: calc(50% - 8px);
     width: 16px;
     height: 16px;
     background: var(--white);
     border: 3px solid var(--primary-color);
     border-radius: 50%;
+  }
+
+  @media (max-width: 500px) {
+    .phase-card::before {
+      display: none;
+    }
   }
 
   .phase-card:nth-child(2)::before {
@@ -372,6 +385,29 @@
 /* Hover effects for mobile */
 @media (max-width: 768px) {
   .phase-card:hover {
-    transform: translateX(5px);
+    transform: none;
+  }
+
+  /* on mobile ensure popover appears centered above card and not to the side */
+  .phase-hover-content {
+    left: 50%;
+    top: -12px;
+    transform: translateX(-50%) translateY(-100%);
+    max-width: 88vw;
+    margin-top: 0;
+  }
+
+  /* extra-narrow screens */
+  @media (max-width: 430px) {
+    .phase-card {
+      width: 94%;
+      max-width: 360px;
+      padding: var(--spacing-sm);
+      font-size: 0.95rem;
+    }
+
+    .phase-hover-content {
+      max-width: 94vw;
+    }
   }
 }
