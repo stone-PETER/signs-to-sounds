@@ -1,3 +1,114 @@
+/* Phase Card Hover Content (Tooltip/Popover) */
+.phase-hover-content {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translateX(12px) translateY(0);
+  min-width: 260px;
+  max-width: 380px;
+  background: linear-gradient(180deg, #ffffff, #fbfbfe);
+  color: var(--text-color);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(17, 24, 39, 0.08),
+    0 4px 12px rgba(17, 24, 39, 0.06);
+  padding: 1rem 1.2rem;
+  z-index: 30;
+  margin-top: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+  border: 1px solid rgba(63, 81, 181, 0.06);
+}
+
+.phase-card:focus .phase-hover-content,
+.phase-card:hover .phase-hover-content {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .phase-hover-content {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(8px);
+    min-width: unset;
+    max-width: 92vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.9rem 1rem;
+  }
+}
+
+/* Desktop-only: push following cards to make room for the right-side popover */
+@media (min-width: 769px) {
+  .phase-card {
+    transition: margin 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      transform 220ms ease;
+  }
+
+  /* when a card is hovered/focused, increase its right margin to reserve space */
+  .phase-card:hover,
+  .phase-card:focus {
+    margin-right: 440px; /* space for the popover + small gap */
+    z-index: 40; /* bring forward */
+  }
+
+  /* ensure the popover arrow appears on the left side of popover */
+  .phase-hover-content::before {
+    top: 12px;
+    left: -6px;
+    transform: rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #ffffff, #fbfbfe);
+    border-left: 1px solid rgba(63, 81, 181, 0.06);
+    border-top: 1px solid rgba(63, 81, 181, 0.06);
+  }
+}
+/* small arrow below the card */
+.phase-hover-content::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #ffffff, #fbfbfe);
+  transform-origin: center;
+  transform: translateX(-50%) rotate(45deg);
+  border-left: 1px solid rgba(63, 81, 181, 0.06);
+  border-top: 1px solid rgba(63, 81, 181, 0.06);
+  z-index: 29;
+}
+
+/* Typography tweaks inside hover content */
+.phase-hover-content strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--primary-color);
+}
+.phase-hover-content ul {
+  margin: 0.25rem 0 0.6rem 1.1rem;
+}
+.phase-hover-content li {
+  margin-bottom: 0.35rem;
+}
+
+/* ensure the popover doesn't push layout when it appears */
+.phase-card {
+  /* reinforce stacking context */
+  z-index: 2;
+}
+
+@media (min-width: 1200px) {
+  .phase-hover-content {
+    max-width: 420px;
+  }
+}
 /* Phases Section Styles */
 .phases {
   width: 100%;
@@ -195,11 +306,19 @@
 .phase-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
+  padding: calc(var(--spacing-xl) + 0.5rem) var(--spacing-xxl);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
   border: 1px solid rgba(63, 81, 181, 0.1);
   text-align: left;
+  min-height: 340px;
+  width: 420px;
+  max-width: 420px;
+  font-size: 1.12rem;
+  /* overflow: hidden; removed to allow content to expand */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .phase-card:hover {
@@ -223,13 +342,16 @@
   color: #f57c00; /* Darker amber for better readability */
 }
 
-.phase-card p {
-  line-height: 1.7;
-  color: var(--text-color);
-  opacity: 0.8;
-  margin: 0;
+.phase-card {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  margin-top: var(--spacing-xl);
+  min-height: 380px;
+  height: 400px;
+  width: 420px;
+  max-width: 420px;
 }
-
 /* Animation delays for staggered entrance */
 .phase-card:nth-child(1) {
   animation: fadeInUp 0.6s ease 0.2s both;
