@@ -30,15 +30,25 @@
 }
 
 @media (max-width: 768px) {
+  /* On small screens keep hover content centered but make it in-flow by default
+     so it always appears inside the card (below the card content) without any
+     hover/click required. */
   .phase-hover-content {
-    left: 50%;
+    position: relative;
+    left: auto;
     right: auto;
-    transform: translateX(-50%) translateY(8px);
+    top: auto;
+    transform: none;
     min-width: unset;
     max-width: 92vw;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 12px 0 0 0;
     padding: 0.9rem 1rem;
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: var(--radius-md);
+    box-shadow: none;
+    border: 1px solid rgba(63, 81, 181, 0.06);
+    overflow: visible;
   }
 }
 
@@ -388,13 +398,25 @@
     transform: none;
   }
 
-  /* on mobile ensure popover appears centered above card and not to the side */
+  /* Make the popover content part of document flow and visible by default on mobile.
+     This ensures the extra details are always present below the card content. */
   .phase-hover-content {
-    left: 50%;
-    top: -12px;
-    transform: translateX(-50%) translateY(-100%);
-    max-width: 88vw;
-    margin-top: 0;
+    /* already set above; keep layout-friendly defaults here too */
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-top: 12px;
+    max-height: none;
+    opacity: 1;
+    pointer-events: auto;
+    overflow: visible;
+    transition: none;
+  }
+
+  /* Hide the small decorative arrow/connector on mobile to avoid overlap */
+  .phase-hover-content::before {
+    display: none;
   }
 
   /* extra-narrow screens */
