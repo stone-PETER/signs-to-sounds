@@ -11,7 +11,7 @@
   color: var(--text-color);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  padding: calc(var(--spacing-xl) + 0.5rem) var(--spacing-xxl);
+  padding: calc(var(--spacing-xl) + 0.5rem) var(--spacing-xl);
   z-index: 30;
   margin-top: 0;
   font-size: 0.98rem;
@@ -263,7 +263,7 @@
 }
 
 /* Mobile Vertical Stack */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .phases-list {
     display: flex;
     flex-direction: column;
@@ -303,15 +303,7 @@
 
   /* Mobile Timeline Dots */
   .phase-card::before {
-    content: "";
-    position: absolute;
-    top: var(--spacing-md);
-    left: calc(50% - 8px);
-    width: 16px;
-    height: 16px;
-    background: var(--white);
-    border: 3px solid var(--primary-color);
-    border-radius: 50%;
+    display: none;
   }
 
   @media (max-width: 500px) {
@@ -333,7 +325,7 @@
 .phase-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: calc(var(--spacing-xl) + 0.5rem) var(--spacing-xxl);
+  padding: calc(var(--spacing-xl) + 0.5rem) var(--spacing-xxl - 0.5rem);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
   border: 1px solid rgba(63, 81, 181, 0.1);

@@ -54,7 +54,7 @@ const phases = [
     ),
   },
   {
-    title: "Phase 4 – Evaluation Criteria",
+    title: "Evaluation Criteria",
     desc: "Accuracy, performance, innovation, scalability, accessibility, documentation & presentation",
     details: (
       <>

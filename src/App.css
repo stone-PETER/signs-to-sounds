@@ -95,6 +95,7 @@ main {
   flex: 1;
   padding-top: 70px; /* Account for fixed header height */
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Ensure all sections span full width */
