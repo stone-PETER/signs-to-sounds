@@ -11,10 +11,7 @@ const phases = [
         <ul>
           <li>Highlight innovation and social impact!</li>
         </ul>
-        <span role="img" aria-label="Tip">
-          💡
-        </span>
-        <em> Show originality & impact!</em>
+        
       </>
     ),
   },
@@ -27,10 +24,7 @@ const phases = [
         <ul>
           <li>🎯 Focus on accuracy, efficiency, and adaptability.</li>
         </ul>
-        <span role="img" aria-label="Focus">
-          🎯
-        </span>
-        <em> Focus: accuracy & adaptability.</em>
+       
       </>
     ),
   },
@@ -44,10 +38,7 @@ const phases = [
           <li>Integrate hardware</li>
           <li>Show real-time use</li>
         </ul>
-        <span role="img" aria-label="Sparkles">
-          ✨
-        </span>
-        <em> Special awards for creativity!</em>
+      
       </>
     ),
   },
