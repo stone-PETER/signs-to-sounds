@@ -4,18 +4,18 @@
   left: 100%;
   top: 0;
   transform: translateX(12px) translateY(0);
-  min-width: 260px;
-  max-width: 300px;
+  min-width: 200px;
+  max-width: 240px;
   /* match card background and border */
   background: var(--white);
   color: var(--text-color);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  padding: calc(var(--spacing-xl) + 0.5rem) var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-lg);
   z-index: 30;
   margin-top: 0;
-  font-size: 0.98rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.5;
   opacity: 0;
   pointer-events: none;
   transition: opacity 220ms ease, transform 220ms ease;
@@ -62,7 +62,7 @@
   /* when a card is hovered/focused, increase its right margin to reserve space */
   .phase-card:hover,
   .phase-card:focus {
-    margin-right: 440px; /* space for the popover + small gap */
+    margin-right: 260px; /* space for the popover width + small gap */
     z-index: 40; /* bring forward */
   }
 
@@ -102,14 +102,16 @@
 /* Typography tweaks inside hover content */
 .phase-hover-content strong {
   display: block;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.3rem;
   color: var(--primary-color);
+  font-size: 0.8rem;
 }
 .phase-hover-content ul {
-  margin: 0.25rem 0 0.6rem 1.1rem;
+  margin: 0.2rem 0 0.4rem 0.8rem;
 }
 .phase-hover-content li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
 }
 
 /* ensure the popover doesn't push layout when it appears */
@@ -120,7 +122,7 @@
 
 @media (min-width: 1200px) {
   .phase-hover-content {
-    max-width: 300px;
+    max-width: 260px;
   }
 }
 /* Phases Section Styles */
@@ -160,17 +162,19 @@
 /* Timeline Container */
 .phases-list {
   position: relative;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: var(--spacing-xl) auto 0;
+  padding: 0 var(--spacing-md);
 }
 
 /* Desktop Timeline Layout */
 @media (min-width: 769px) {
   .phases-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-lg);
   }
 
   /* Timeline Line */
@@ -192,12 +196,13 @@
   }
 
   .phase-card {
-    flex: 1;
+    flex: 0 1 auto;
     position: relative;
     z-index: 2;
     margin-top: var(--spacing-xl);
     height: auto;
     min-height: fit-content;
+    max-width: 300px;
   }
 
   /* Timeline Dots */
@@ -264,7 +269,7 @@
 }
 
 /* Mobile Vertical Stack */
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
   .phases-list {
     display: flex;
     flex-direction: column;
