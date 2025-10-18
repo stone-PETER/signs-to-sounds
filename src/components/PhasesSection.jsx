@@ -4,13 +4,12 @@ import "./PhasesSection.css";
 const phases = [
   {
     title: "Phase 1 – Research & Proposal",
-    desc: "Explore the problem and submit your plan.",
+    desc: "Explore the problem, analyze datasets, and design your AI framework. Submit a proposal detailing your problem approach, data strategy, model plan, and workflow.",
     details: (
       <>
-        <strong>Proposal includes:</strong>
+        <strong>💡 Tip</strong>
         <ul>
-          <li>Problem & solution</li>
-          <li>Data & model plan</li>
+          <li>Highlight innovation and social impact!</li>
         </ul>
         <span role="img" aria-label="Tip">
           💡
@@ -21,13 +20,12 @@ const phases = [
   },
   {
     title: "Phase 2 – Model & Demo",
-    desc: "Train your model and show results.",
+    desc: "Shortlisted teams train and optimize models using ethical datasets. Document performance, metrics, and challenges, and submit a demo video.",
     details: (
       <>
-        <strong>Teams will:</strong>
+        <strong>Tip</strong>
         <ul>
-          <li>Train with ethical data</li>
-          <li>Report & demo video</li>
+          <li>🎯 Focus on accuracy, efficiency, and adaptability.</li>
         </ul>
         <span role="img" aria-label="Focus">
           🎯
@@ -38,7 +36,7 @@ const phases = [
   },
   {
     title: "Phase 3 – Prototype & Judging",
-    desc: "Build a real-time sign-to-speech prototype.",
+    desc: "Build a real-time sign-to-speech prototype integrating camera, microcontroller, and audio output. Showcase live performance with deployment docs and a final presentation.",
     details: (
       <>
         <strong>Teams will:</strong>
@@ -55,16 +53,15 @@ const phases = [
   },
   {
     title: "Evaluation Criteria",
-    desc: "Accuracy, performance, innovation, scalability, accessibility, documentation & presentation",
+    desc: "Model accuracy & real-time performance\nInnovation & scalability\nAccessibility impact\nDocumentation & presentation.",
     details: (
       <>
         <span role="img" aria-label="Trophy">
           🏆
         </span>
-        <strong> Bonus Awards:</strong>
+        <strong>✨Special Awards:</strong>
         <ul>
-          <li>Audience’s Choice</li>
-          <li>Innovation Excellence</li>
+          <li>Audience’s Choice & Innovation Excellence</li>
         </ul>
       </>
     ),
