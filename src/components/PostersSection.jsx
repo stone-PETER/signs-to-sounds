@@ -13,7 +13,11 @@ const posters = [
   "/posters/p1.jpg",
   "/posters/p2.jpg",
   "/posters/p3.jpg",
-  "/posters/p4.jpg"
+  "/posters/p4.jpg",
+  "/posters/prize$.png",
+  "/posters/winitall.jpg",
+
+
   // Add more poster paths here as you add new posters
   // Example: "/posters/poster2.jpg",
 ];
