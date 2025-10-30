@@ -54,9 +54,9 @@ const Header = () => {
             <li>
               <a href="#phases">Phases</a>
             </li>
-            {/* <li>
+            <li>
               <a href="#prizes">Prizes</a>
-            </li> */}
+            </li>
             <li>
               <a href="#opportunities">Opportunities</a>
             </li>

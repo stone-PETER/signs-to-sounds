@@ -20,6 +20,7 @@ const PrizesSection = () => (
           </div>
         ))}
       </div>
+      <p className="prizes-note">Every winner gets gadgets worth $25.</p>
       {/* <div className="registration">
         <p>
           <strong>Registration Fee:</strong> $5
