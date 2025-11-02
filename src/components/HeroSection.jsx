@@ -4,6 +4,7 @@ import "./HeroSection.css";
 
 const HeroSection = () => (
   <section className="hero">
+  
     {/* Floating Bubbles */}
     <div className="floating-bubbles">
   <div className="bubble bubble1">
