@@ -18,6 +18,18 @@ const HeroSection = () => (
   <div className="bubble bubble4">
     <img src="/asts.png" alt="AI icon" />
   </div>
+   <div className="bubble bubble5">
+    <img src="/ast1.png" alt="gesture icon" />
+  </div>
+  <div className="bubble bubble6">
+    <img src="/ast2.png" alt="wave icon" />
+  </div>
+  <div className="bubble bubble7">
+    <img src="/asts.png" alt="microphone" />
+  </div>
+  <div className="bubble bubble8">
+    <img src="/ast3.png" alt="brain icon" />
+  </div>
 </div>
 
 

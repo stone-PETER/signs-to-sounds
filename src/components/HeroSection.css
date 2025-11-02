@@ -217,92 +217,133 @@
 }
 
 
-/* Floating Bubbles */
-.floating-bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Each bubble acts as a circular container */
-.floating-bubbles .bubble {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
-  opacity: 0.8;
-  animation: floatBubble 15s infinite ease-in-out;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
-  transition: transform 0.3s ease;
-}
-
-/* Glow and slight enlargement on hover (optional, if pointer-events enabled) */
-.bubble:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.3);
-}
-
-/* Image inside the bubble */
-.bubble img {
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
-/* Individual bubble positions and speeds */
-.bubble1 {
-  top: 25%;
-  left: 12%;
-  animation-delay: 0s;
-  animation-duration: 20s;
-}
-
-.bubble2 {
-  top: 65%;
-  left: 22%;
-  animation-delay: 3s;
-  animation-duration: 23s;
-}
-
-.bubble3 {
-  top: 45%;
-  right: 15%;
-  animation-delay: 5s;
-  animation-duration: 21s;
-}
-
-.bubble4 {
-  top: 75%;
-  right: 8%;
-  animation-delay: 1s;
-  animation-duration: 26s;
-}
-
-@keyframes floatBubble {
-  0% {
-    transform: translateY(0px) scale(1);
-    opacity: 0.85;
+/* Floating Bubbles (Desktop Only) */
+/* Floating Bubbles (Desktop Only) */
+@media (min-width: 1024px) {
+  .floating-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
   }
-  50% {
-    transform: translateY(-40px) scale(1.1) rotate(5deg);
-    opacity: 1;
+
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.05)
+    );
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+    opacity: 0.75;
+    animation: bubbleFall linear infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
   }
-  100% {
-    transform: translateY(0px) scale(1);
-    opacity: 0.85;
+
+  .bubble img {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+    opacity: 0.9;
+  }
+
+  /* Different positions, sizes & speeds */
+  .bubble1 {
+    left: 5%;
+    width: 90px;
+    height: 90px;
+    animation-duration: 22s;
+    animation-delay: 0s;
+  }
+
+  .bubble2 {
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 26s;
+    animation-delay: 3s;
+  }
+
+  .bubble3 {
+    left: 35%;
+    width: 75px;
+    height: 75px;
+    animation-duration: 28s;
+    animation-delay: 5s;
+  }
+
+  .bubble4 {
+    right: 10%;
+    width: 95px;
+    height: 95px;
+    animation-duration: 30s;
+    animation-delay: 2s;
+  }
+
+  .bubble5 {
+    right: 25%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 27s;
+    animation-delay: 4s;
+  }
+
+  .bubble6 {
+    left: 50%;
+    width: 110px;
+    height: 110px;
+    animation-duration: 35s;
+    animation-delay: 1s;
+  }
+
+  .bubble7 {
+    right: 35%;
+    width: 70px;
+    height: 70px;
+    animation-duration: 25s;
+    animation-delay: 6s;
+  }
+
+  .bubble8 {
+    left: 60%;
+    width: 100px;
+    height: 100px;
+    animation-duration: 32s;
+    animation-delay: 8s;
+  }
+
+  @keyframes bubbleFall {
+    0% {
+      transform: translateY(-120px) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(110vh) scale(1.05);
+      opacity: 0;
+    }
   }
 }
+
+/* Hide bubbles entirely on smaller screens */
+@media (max-width: 1023px) {
+  .floating-bubbles {
+    display: none;
+  }
+}
+
