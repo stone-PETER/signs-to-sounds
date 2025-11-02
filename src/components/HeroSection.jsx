@@ -34,13 +34,13 @@ const HeroSection = ({ onRegisterClick }) => {
           technology for real-time sign language to speech conversion.
         </p>
         <div className="hero-actions">
-          <a
+          {/* <a
             href="#register"
             className="button primary"
             onClick={handleRegisterClick}
           >
             Register Now
-          </a>
+          </a> */}
           <a href="#about" className="button secondary alt">
             Learn More
           </a>
