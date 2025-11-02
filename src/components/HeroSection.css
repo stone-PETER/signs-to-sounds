@@ -1,4 +1,21 @@
 /* Hero Section Styles */
+.saira-stencil-one-regular {
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .hero h1 .signs-to-sounds {
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight:700;
+  display: block;
+} */
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -51,6 +68,9 @@
 }
 
 .hero h1 {
+  font-family: "Black Ops One", sans-serif;
+  font-weight:700;
+  display: block;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
   line-height: 1.1;
