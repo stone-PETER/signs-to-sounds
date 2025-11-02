@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ onRegisterClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -13,6 +13,11 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleRegisterClick = (e) => {
+    e.preventDefault();
+    onRegisterClick();
+  };
 
   return (
     <header
@@ -72,12 +77,13 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header-cta">
-          {/* <a
-            href="https://www.yepdesk.com/sign-to-sound"
+          <a
+            href="#register"
             className="button primary small"
+            onClick={handleRegisterClick}
           >
             Register
-          </a> */}
+          </a>
         </div>
       </div>
     </header>

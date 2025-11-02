@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
@@ -9,13 +10,24 @@ import PostersSection from "./components/PostersSection";
 import TeamSection from "./components/TeamSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import GuidelinesModal from "./components/GuidelinesModal";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="App">
-      <Header />
+      <Header onRegisterClick={handleOpenModal} />
       <main id="main">
-        <HeroSection />
+        <HeroSection onRegisterClick={handleOpenModal} />
         <div id="about">
           <AboutSection />
         </div>
@@ -39,6 +51,8 @@ function App() {
         </div> */}
       </main>
       <Footer />
+
+      <GuidelinesModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 }

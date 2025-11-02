@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import "./HeroSection.css";
-import GuidelinesModal from "./GuidelinesModal";
 
-const HeroSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+const HeroSection = ({ onRegisterClick }) => {
   const handleRegisterClick = (e) => {
     e.preventDefault();
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+    onRegisterClick();
   };
 
   return (
@@ -41,7 +34,11 @@ const HeroSection = () => {
           technology for real-time sign language to speech conversion.
         </p>
         <div className="hero-actions">
-          <a href="#register" className="button primary" onClick={handleRegisterClick}>
+          <a
+            href="#register"
+            className="button primary"
+            onClick={handleRegisterClick}
+          >
             Register Now
           </a>
           <a href="#about" className="button secondary alt">
@@ -49,8 +46,6 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-
-      <GuidelinesModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </section>
   );
 };
