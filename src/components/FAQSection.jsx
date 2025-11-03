@@ -4,7 +4,7 @@ import "./FAQSection.css";
 const faqs = [
   {
     q: "Who is eligible to participate in the competition?",
-    a: "The competition is open to undergraduate and postgraduate students from Engineering, Electrical / Electronics Engineering, Computer Science, Biomedical Engineering, and related fields. Teams should consist of two to four members, with at least one member having experience in Signal Processing, Machine Learning, or Embedded Systems. Participation is open to students from any geographic region.",
+    a: "The competition is open to students pursuing any degree (undergraduate, postgraduate, or PhD). Teams should consist of two to four members, with at least one member having experience in Signal Processing, Machine Learning, or Embedded Systems. Team members do not need to be from the same college or institute. Participation is open to students from any geographic region.",
   },
   {
     q: "Is there any participation fee or is the competition free of cost?",

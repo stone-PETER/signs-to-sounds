@@ -14,7 +14,8 @@ const Footer = () => (
       <div className="footer-links">
         <div className="contact section">
           <h4>Contact</h4>
-          <p className="email">ieeespskerala@gmail.com</p>
+          <p className="email">sign2sound@gmail.com</p>
+          <p className="email bt">ieeespskerala@gmail.com</p>
           <div className="contact-person">
             <h5>Resha Fathima</h5>
             <p>+91 70347 49249</p>
