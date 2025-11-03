@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     q: "Is there any participation fee or is the competition free of cost?",
-    a: "There is a participation fee of 5 USD. The competition is partially supported by the lEEE Signal Processing Society, helping to keep the fee minimal for all participants.",
+    a: "There is a registration fee based on IEEE membership status: $4 if the team lead has IEEE SPS membership, $4.5 if the team lead has IEEE membership, and $5 for non-IEEE membered teams. The competition is partially supported by the IEEE Signal Processing Society, helping to keep the fee minimal for all participants.",
   },
   {
     q: "What type of submissions are required (prototype, demo video, technical documentation, source code)?",
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "What is the evaluation and judging criteria for the submissions?",
-    a: "Submissions will be evaluated on technical innovation, data strategy and usage, functionality, impact and inclusivity, and clarity of presentation. Technical innovation and data strategy have the highest weight. Judging will be conducted by experts from IEEE SPS and accessibility domains to ensure fairness and quality.",
+    a: "Submissions will be evaluated on technical innovation, data strategy and usage, functionality, impact and inclusivity, and clarity of presentation. Technical innovation and data strategy will have the highest weightage. Judging will be conducted by experts from IEEE SPS and accessibility domains to ensure fairness and quality.",
   },
   {
     q: "How will the competition outcomes be sustained or scaled after the event?",
