@@ -17,7 +17,9 @@ const posters = [
   "/posters/p4.jpg",
   "/posters/prize$.png",
   "/posters/winitall.jpg",
-
+  "/posters/extended.png",
+  "/posters/aim.png",
+  "/posters/benefits.png",
 
   // Add more poster paths here as you add new posters
   // Example: "/posters/poster2.jpg",
