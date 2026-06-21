@@ -2,9 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
+import FeaturedPosterBanner from "./components/FeaturedPosterBanner";
 import PhasesSection from "./components/PhasesSection";
 import OpportunitiesSection from "./components/OpportunitiesSection";
 import PrizesSection from "./components/PrizesSection";
+import WinnersSection from "./components/WinnersSection";
 import FAQSection from "./components/FAQSection";
 import PostersSection from "./components/PostersSection";
 import TeamSection from "./components/TeamSection";
@@ -31,6 +33,7 @@ function App() {
         <div id="about">
           <AboutSection />
         </div>
+        <FeaturedPosterBanner />
         <div id="phases">
           <PhasesSection />
         </div>
@@ -39,6 +42,9 @@ function App() {
         </div>
         <div id="prizes">
           <PrizesSection />
+        </div>
+        <div id="winners">
+          <WinnersSection />
         </div>
         <div id="faq">
           <FAQSection />

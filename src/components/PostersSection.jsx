@@ -9,7 +9,7 @@ import "./PostersSection.css";
 // Import all posters from the posters directory
 // Add more poster paths as you add new files to public/posters/
 const posters = [
-  "/posters/ss4.jpg.png",
+  "/posters/ss4.jpg",
   "/posters/campuss.png",
   "/posters/p1.jpg",
   "/posters/p2.jpg",
@@ -17,9 +17,9 @@ const posters = [
   "/posters/p4.jpg",
   "/posters/prize$.png",
   "/posters/winitall.jpg",
-  "/posters/extended.png",
-  "/posters/aim.png",
-  "/posters/benefits.png",
+  "/posters/extended.jpg",
+  "/posters/aim.jpg",
+  "/posters/benefits.jpg",
 
   // Add more poster paths here as you add new posters
   // Example: "/posters/poster2.jpg",
