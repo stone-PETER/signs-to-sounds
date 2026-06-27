@@ -1,0 +1,65 @@
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-lg);
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.video-modal__dialog {
+  position: relative;
+  width: min(860px, 100%);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.video-modal__close {
+  all: unset;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.82);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-modal__frame {
+  background: #0f172a;
+}
+
+.video-modal__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-modal__meta {
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.video-modal__team {
+  margin: 0 0 0.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-dark);
+}
+
+.video-modal__meta h3 {
+  margin: 0;
+  color: var(--primary-dark);
+}

@@ -58,7 +58,7 @@ const PostersSection = () => {
       if (swiperRef.current && swiperRef.current.autoplay) {
         try {
           swiperRef.current.autoplay.start();
-        } catch (e) {
+        } catch {
           // ignore
         }
       }

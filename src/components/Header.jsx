@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 
-const Header = ({ onRegisterClick }) => {
+const Header = ({ onRegisterClick, onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -17,6 +17,11 @@ const Header = ({ onRegisterClick }) => {
   const handleRegisterClick = (e) => {
     e.preventDefault();
     onRegisterClick();
+  };
+
+  const handleNavigate = (event, href) => {
+    event.preventDefault();
+    onNavigate(href);
   };
 
   return (
@@ -54,25 +59,43 @@ const Header = ({ onRegisterClick }) => {
         <nav aria-label="Primary" className="nav-main">
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a href="/#about" onClick={(event) => handleNavigate(event, "/#about")}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#phases">Phases</a>
+              <a
+                href="/#projects"
+                onClick={(event) => handleNavigate(event, "/#projects")}
+              >
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#prizes">Prizes</a>
+              <a href="/#phases" onClick={(event) => handleNavigate(event, "/#phases")}>
+                Phases
+              </a>
             </li>
             <li>
-              <a href="#opportunities">Opportunities</a>
+              <a href="/#prizes" onClick={(event) => handleNavigate(event, "/#prizes")}>
+                Prizes
+              </a>
             </li>
             {/* <li>
               <a href="#team">Team</a>
             </li> */}
             <li>
-              <a href="#faq">FAQ</a>
+              <a href="/#faq" onClick={(event) => handleNavigate(event, "/#faq")}>
+                FAQ
+              </a>
             </li>
             <li>
-              <a href="#posters">Posters</a>
+              <a
+                href="/#posters"
+                onClick={(event) => handleNavigate(event, "/#posters")}
+              >
+                Posters
+              </a>
             </li>
           </ul>
         </nav>
