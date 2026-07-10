@@ -7,6 +7,7 @@ import PhasesSection from "./components/PhasesSection";
 import OpportunitiesSection from "./components/OpportunitiesSection";
 import PrizesSection from "./components/PrizesSection";
 import WinnersSection from "./components/WinnersSection";
+import CompetitionWinnersSection from "./components/CompetitionWinnersSection";
 import FAQSection from "./components/FAQSection";
 import PostersSection from "./components/PostersSection";
 import Footer from "./components/Footer";
@@ -112,6 +113,8 @@ function App() {
             <div id="about">
               <AboutSection />
             </div>
+            <CompetitionWinnersSection />
+            
             <FeaturedPosterBanner />
             <ProjectsSection
               onNavigate={navigate}
